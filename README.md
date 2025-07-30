@@ -981,7 +981,7 @@ import Markdown from 'react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 
-const onLinkPress = (url) => {
+const onLinkPress = (url, text) => {
     if (url) {
       // some custom logic
       return false;

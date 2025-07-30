@@ -24,7 +24,15 @@ export type RenderLinkFunction = (
   children: ReactNode[],
   parentNodes: ASTNode[],
   styles: any,
-  onLinkPress?: (url: string) => boolean,
+  /**
+   * Callback function to handle link presses.
+   * @param url The URL of the link.
+   * @param text The text content of the link.
+   * @returns A boolean indicating whether the link press was handled.
+   * If the function returns false, the link press is considered handled.
+   * If the function returns true, the link press is considered unhandled.
+   */
+  onLinkPress?: (url: string, text: string) => boolean,
 ) => ReactNode;
 
 export type RenderImageFunction = (
@@ -88,7 +96,15 @@ export interface MarkdownProps {
   markdownit?: MarkdownIt;
   mergeStyle?: boolean;
   debugPrintTree?: boolean;
-  onLinkPress?: (url: string) => boolean;
+  /**
+   * Callback function to handle link presses.
+   * @param url The URL of the link.
+   * @param text The text content of the link.
+   * @returns A boolean indicating whether the link press was handled.
+   * If the function returns false, the link press is considered handled.
+   * If the function returns true, the link press is considered unhandled.
+   */
+  onLinkPress?: (url: string, text: string) => boolean;
 }
 
 type MarkdownStatic = ComponentType<PropsWithChildren<MarkdownProps>>;
