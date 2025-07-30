@@ -243,23 +243,32 @@ const renderRules = {
     </View>
   ),
 
-  // Links
-  link: (node, children, parent, styles, onLinkPress) => (
-    <Text
-      key={node.key}
-      style={styles.link}
-      onPress={() => openUrl(node.attributes.href, onLinkPress)}>
-      {children}
-    </Text>
-  ),
-  blocklink: (node, children, parent, styles, onLinkPress) => (
-    <TouchableWithoutFeedback
-      key={node.key}
-      onPress={() => openUrl(node.attributes.href, onLinkPress)}
-      style={styles.blocklink}>
-      <View style={styles.image}>{children}</View>
-    </TouchableWithoutFeedback>
-  ),
+ link: (node, children, parent, styles, onLinkPress) => {
+     const url = node.attributes.href;
+     const linkText = node.children.at(0)?.content;
+ 
+     return (
+       <Text
+         key={node.key}
+         style={styles.link}
+         onPress={() => openUrl(url, linkText, onLinkPress)}>
+         {children}
+       </Text>
+     );
+   },
+  blocklink: (node, children, parent, styles, onLinkPress) => {
+    const url = node.attributes.href;
+    const linkText = node.children.at(0)?.content;
+ 
+    return (
+      <TouchableWithoutFeedback
+        key={node.key}
+        onPress={() => openUrl(url, linkText, onLinkPress)}
+        style={styles.blocklink}>
+        <View style={styles.image}>{children}</View>
+      </TouchableWithoutFeedback>
+    );
+  },
 
   // Images
   image: (

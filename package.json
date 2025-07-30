@@ -1,18 +1,20 @@
 {
-  "name": "react-native-markdown-display",
-  "version": "7.0.2",
-  "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
+  "name": "mo3ta-markdown",
+  "version": "0.0.2",
+  "description": "react-native-markdown-display with some changes",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --fix --cache ./src"
+    "lint": "./node_modules/.bin/eslint --fix --cache ./src",
+    "build": "babel src --out-dir lib --copy-files",
+    "runAndroidSample": "cd SampleApp && npx react-native run-android"
   },
   "pre-commit": [
     "lint"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamacup/react-native-markdown-display.git"
+    "url": "git+https://github.com/MahmoudMabrok/mo3ta-markdown.git"
   },
   "keywords": [
     "react",
@@ -25,9 +27,9 @@
   "author": "Mient-jan Stelling and Tom Pickard + others from the community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamacup/react-native-markdown-display/issues"
+    "url": "https://github.com/MahmoudMabrok/mo3ta-markdown/issues"
   },
-  "homepage": "https://github.com/iamacup/react-native-markdown-display/",
+  "homepage": "https://github.com/MahmoudMabrok/mo3ta-markdown/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
     "markdown-it": "^10.0.0",
