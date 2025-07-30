@@ -1,6 +1,6 @@
 {
   "name": "mo3ta-markdown",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "react-native-markdown-display with some changes",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -22,7 +22,8 @@
     "native",
     "markdown",
     "commonmark",
-    "markdown-it"
+    "markdown-it", 
+    "react-native-markdown-display"
   ],
   "author": "Mient-jan Stelling and Tom Pickard + others from the community",
   "license": "MIT",
