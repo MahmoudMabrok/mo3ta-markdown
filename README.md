@@ -2,12 +2,18 @@
 
 This fork from [react-native-markdown-display](https://github.com/iamacup/react-native-markdown-display) as it not maintained for long time, and i wanted to add and fix some points. 
 
-## New Features 
-### Add SampleApp 
+# Installation 
+```
+npm i mo3ta-markdown
+```
+check [npm](https://www.npmjs.com/package/mo3ta-markdown)
+
+# New Features 
+## Add SampleApp 
 - Now you can try the lib in sample app. 
 - Will be updated to have real examples and tricks. 
 
-### Improve onLinkPress 
+## Improve onLinkPress 
 - I needed to have the text clicked on, not only the link, this would help in situation when i want to add analytics for clciking on links. 
 
 ```jsx
