@@ -305,7 +305,7 @@ const renderRules = {
       imageProps.accessibilityLabel = alt;
     }
 
-    return <FitImage {...imageProps} />;
+    return <FitImage key={node.key} {...imageProps} />;
   },
 
   // Text Output
