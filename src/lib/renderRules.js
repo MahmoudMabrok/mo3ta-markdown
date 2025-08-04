@@ -293,7 +293,6 @@ const renderRules = {
 
     const imageProps = {
       indicator: true,
-      key: node.key,
       style: styles._VIEW_SAFE_image,
       source: {
         uri: show === true ? src : `${defaultImageHandler}${src}`,
