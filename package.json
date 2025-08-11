@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --fix --cache ./src",
+    "lint": "./node_modules/.bin/eslint --fix ./src",
     "build": "babel src --out-dir lib --copy-files",
     "runAndroidSample": "cd SampleApp && npx react-native run-android"
   },
@@ -50,8 +50,8 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@types/markdown-it": "^14.0.1",
     "@types/react-native": ">=0.50.0",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "8.39.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
