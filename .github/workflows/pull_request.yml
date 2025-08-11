@@ -1,7 +1,6 @@
-name: Publish Package
+name: PR checks
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     branches:
       - master 
 
@@ -25,9 +24,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-      - name: Configure npm authentication
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
-      - name: Publish package
-        run: npm publish

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Text,
   TouchableWithoutFeedback,
@@ -15,7 +14,7 @@ import textStyleProps from './data/textStyleProps';
 
 const renderRules = {
   // when unknown elements are introduced, so it wont break
-  unknown: (node, children, parent, styles) => null,
+  unknown: () => null,
 
   // The main container
   body: (node, children, parent, styles) => (
@@ -171,12 +170,12 @@ const renderRules = {
   },
 
   // Code
-  code_inline: (node, children, parent, styles, inheritedStyles = {}) => (
+  code_inline: (node, _, __, styles, inheritedStyles = {}) => (
     <Text key={node.key} style={[inheritedStyles, styles.code_inline]}>
       {node.content}
     </Text>
   ),
-  code_block: (node, children, parent, styles, inheritedStyles = {}) => {
+  code_block: (node, _, __, styles, inheritedStyles = {}) => {
     // we trim new lines off the end of code blocks because the parser sends an extra one.
     let {content} = node;
 
@@ -193,7 +192,7 @@ const renderRules = {
       </Text>
     );
   },
-  fence: (node, children, parent, styles, inheritedStyles = {}) => {
+  fence: (node, _, __, styles, inheritedStyles = {}) => {
     // we trim new lines off the end of code blocks because the parser sends an extra one.
     let {content} = node;
 
@@ -212,54 +211,54 @@ const renderRules = {
   },
 
   // Tables
-  table: (node, children, parent, styles) => (
+  table: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_table}>
       {children}
     </View>
   ),
-  thead: (node, children, parent, styles) => (
+  thead: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_thead}>
       {children}
     </View>
   ),
-  tbody: (node, children, parent, styles) => (
+  tbody: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_tbody}>
       {children}
     </View>
   ),
-  th: (node, children, parent, styles) => (
+  th: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_th}>
       {children}
     </View>
   ),
-  tr: (node, children, parent, styles) => (
+  tr: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_tr}>
       {children}
     </View>
   ),
-  td: (node, children, parent, styles) => (
+  td: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_td}>
       {children}
     </View>
   ),
 
- link: (node, children, parent, styles, onLinkPress) => {
-     const url = node.attributes.href;
-     const linkText = node.children.at(0)?.content;
- 
-     return (
-       <Text
-         key={node.key}
-         style={styles.link}
-         onPress={() => openUrl(url, linkText, onLinkPress)}>
-         {children}
-       </Text>
-     );
-   },
-  blocklink: (node, children, parent, styles, onLinkPress) => {
+  link: (node, children, _, styles, onLinkPress) => {
     const url = node.attributes.href;
     const linkText = node.children.at(0)?.content;
- 
+
+    return (
+      <Text
+        key={node.key}
+        style={styles.link}
+        onPress={() => openUrl(url, linkText, onLinkPress)}>
+        {children}
+      </Text>
+    );
+  },
+  blocklink: (node, children, _, styles, onLinkPress) => {
+    const url = node.attributes.href;
+    const linkText = node.children.at(0)?.content;
+
     return (
       <TouchableWithoutFeedback
         key={node.key}
@@ -273,8 +272,8 @@ const renderRules = {
   // Images
   image: (
     node,
-    children,
-    parent,
+    _,
+    __,
     styles,
     allowedImageHandlers,
     defaultImageHandler,
@@ -308,44 +307,44 @@ const renderRules = {
   },
 
   // Text Output
-  text: (node, children, parent, styles, inheritedStyles = {}) => (
+  text: (node, _, __, styles, inheritedStyles = {}) => (
     <Text key={node.key} style={[inheritedStyles, styles.text]}>
       {node.content}
     </Text>
   ),
-  textgroup: (node, children, parent, styles) => (
+  textgroup: (node, children, _, styles) => (
     <Text key={node.key} style={styles.textgroup}>
       {children}
     </Text>
   ),
-  paragraph: (node, children, parent, styles) => (
+  paragraph: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_paragraph}>
       {children}
     </View>
   ),
-  hardbreak: (node, children, parent, styles) => (
+  hardbreak: (node, _, __, styles) => (
     <Text key={node.key} style={styles.hardbreak}>
       {'\n'}
     </Text>
   ),
-  softbreak: (node, children, parent, styles) => (
+  softbreak: (node, _, __, styles) => (
     <Text key={node.key} style={styles.softbreak}>
       {'\n'}
     </Text>
   ),
 
   // Believe these are never used but retained for completeness
-  pre: (node, children, parent, styles) => (
+  pre: (node, children, _, styles) => (
     <View key={node.key} style={styles._VIEW_SAFE_pre}>
       {children}
     </View>
   ),
-  inline: (node, children, parent, styles) => (
+  inline: (node, children, _, styles) => (
     <Text key={node.key} style={styles.inline}>
       {children}
     </Text>
   ),
-  span: (node, children, parent, styles) => (
+  span: (node, children, _, styles) => (
     <Text key={node.key} style={styles.span}>
       {children}
     </Text>

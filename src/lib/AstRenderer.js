@@ -36,7 +36,7 @@ export default class AstRenderer {
    * @param {string} type
    * @return {string}
    */
-  getRenderFunction = (type) => {
+  getRenderFunction(type) {
     const renderFunction = this._renderRules[type];
 
     if (!renderFunction) {
@@ -47,7 +47,7 @@ export default class AstRenderer {
     }
 
     return renderFunction;
-  };
+  }
 
   /**
    *
@@ -55,7 +55,7 @@ export default class AstRenderer {
    * @param parentNodes
    * @return {*}
    */
-  renderNode = (node, parentNodes, isRoot = false) => {
+  renderNode(node, parentNodes, isRoot = false) {
     const renderFunction = this.getRenderFunction(node.type);
     const parents = [...parentNodes];
 
@@ -172,15 +172,15 @@ export default class AstRenderer {
     // render anythign else that has a normal signature
 
     return renderFunction(node, children, parentNodes, this._style);
-  };
+  }
 
   /**
    *
    * @param nodes
    * @return {*}
    */
-  render = (nodes) => {
+  render(nodes) {
     const root = {type: 'body', key: getUniqueID(), children: nodes};
     return this.renderNode(root, [], true);
-  };
+  }
 }
