@@ -1,6 +1,9 @@
 name: Publish Package
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main 
 
 jobs:
   publish:
@@ -17,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Run tests
-      #   run: npm test
+      - name: Run tests
+        run: npm test
 
       - name: Configure npm authentication
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
