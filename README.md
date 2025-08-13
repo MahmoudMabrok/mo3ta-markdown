@@ -1,28 +1,39 @@
 # mo3ta-markdown ![NPM Version](https://img.shields.io/npm/v/mo3ta-markdown)
 
-This fork from [react-native-markdown-display](https://github.com/iamacup/react-native-markdown-display) as it not maintained for long time, and i wanted to add and fix some points. 
+This project is a fork of [react-native-markdown-display](https://github.com/iamacup/react-native-markdown-display), created to address maintenance gaps and introduce improvements.
 
-# Installation 
-```
+# Installation
+
+```bash
 npm i mo3ta-markdown
 ```
-check [npm](https://www.npmjs.com/package/mo3ta-markdown)
+See the package on [npm](https://www.npmjs.com/package/mo3ta-markdown).
 
-# New Features 
-## Add SampleApp 
-- Now you can try the lib in sample app. 
-- Will be updated to have real examples and tricks. 
+# New Features
 
-## Improve onLinkPress 
-- I needed to have the text clicked on, not only the link, this would help in situation when i want to add analytics for clciking on links. 
+## Sample App
+
+- Try out the library in the included sample app.
+- The sample app will be updated with practical examples and tips.
+
+## Enhanced `onLinkPress`
+
+- The `onLinkPress` callback now provides both the URL and the clicked text, enabling use cases like analytics for link clicks.
 
 ```jsx
 <Markdown
-          onLinkPress={(url, text) => {
-            // Handle link press
-            console.log('Link pressed:', url);
-            console.log('Link text:', text);
-            return false; // or false, depending on your logic
-          }}
-        >{markdown}</Markdown>
+  onLinkPress={(url, text) => {
+    // Handle link press
+    console.log('Link pressed:', url);
+    console.log('Link text:', text);
+    return false; // Adjust logic as needed
+  }}
+>
+  {markdown}
+</Markdown>
 ```
+
+## Security and Linting Improvements
+
+- Upgraded `markdown.it` to address vulnerabilities.
+- Fixed lint issues and added ESLint checks for better pre-commit workflows.
