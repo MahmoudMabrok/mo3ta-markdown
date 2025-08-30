@@ -1,4 +1,4 @@
-# mo3ta-markdown ![NPM Version](https://img.shields.io/npm/v/mo3ta-markdown)
+# mo3ta-markdown ![NPM Version](https://img.shields.io/npm/v/mo3ta-markdown)  [![Known Vulnerabilities](https://snyk.io/test/github/MahmoudMabrok/mo3ta-markdown/badge.svg)](https://snyk.io/test/github/MahmoudMabrok/mo3ta-markdown)
 
 This project is a fork of [react-native-markdown-display](https://github.com/iamacup/react-native-markdown-display), created to address maintenance gaps and introduce improvements.
 
