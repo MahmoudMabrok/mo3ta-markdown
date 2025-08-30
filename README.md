@@ -7,7 +7,7 @@ This project is a fork of [react-native-markdown-display](https://github.com/iam
 ```bash
 npm i mo3ta-markdown
 ```
-See the package on [npm](https://www.npmjs.com/package/mo3ta-markdown).
+See the package on [npm](https://www.npmjs.com/package/@mo3ta-dev/react-native-markdown-display).
 
 # New Features
 

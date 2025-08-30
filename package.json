@@ -1,5 +1,5 @@
 {
-  "name": "@mo3ta/react-native-markdown-display",
+  "name": "@mo3ta-dev/react-native-markdown-display",
   "version": "0.2.4",
   "description": "react-native-markdown-display with some changes",
   "main": "src/index.js",
