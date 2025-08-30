@@ -1,6 +1,6 @@
 {
-  "name": "mo3ta-markdown",
-  "version": "0.2.3",
+  "name": "@mo3ta/react-native-markdown-display",
+  "version": "0.2.4",
   "description": "react-native-markdown-display with some changes",
   "main": "src/index.js",
   "types": "src/index.d.ts",
