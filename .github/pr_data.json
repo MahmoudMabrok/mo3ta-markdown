@@ -1,0 +1,237 @@
+{
+  "teams": {
+    "base-code-reviewers": {
+      "members": [
+        {
+          "login": "Noha-Magdy-Ismail"
+        },
+        {
+          "login": "nouran-mohamed1"
+        },
+        {
+          "login": "eman-saleh"
+        },
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    },
+    "gladiators-devs": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "hesham-abdelkader"
+        },
+        {
+          "login": "mohamed-elmalhey"
+        },
+        {
+          "login": "hassan-mostafa2"
+        },
+        {
+          "login": "adham-hemdan"
+        },
+        {
+          "login": "pola-tawfik"
+        },
+        {
+          "login": "mahmoud-abdullah1"
+        }
+      ]
+    },
+    "gladiators-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "hesham-abdelkader"
+        },
+        {
+          "login": "adham-hemdan"
+        }
+      ]
+    },
+    "lm-ie-devs": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    },
+    "lm-ie-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    },
+    "maintainers-devs": {
+      "members": [
+        {
+          "login": "kirollos-abadier"
+        },
+        {
+          "login": "marina-aziz"
+        },
+        {
+          "login": "yousef-nwear"
+        },
+        {
+          "login": "thomas-samoul"
+        }
+      ]
+    },
+    "maintainers-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "kirollos-abadier"
+        }
+      ]
+    },
+    "mrekulli-devs": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "inis-merkohasanaj"
+        },
+        {
+          "login": "uendi-xhimo1"
+        }
+      ]
+    },
+    "mrekulli-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "inis-merkohasanaj"
+        }
+      ]
+    },
+    "navigators-devs": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    },
+    "navigators-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    },
+    "pegasus-devs": {
+      "members": [
+        {
+          "login": "esraa-alieldaltony"
+        },
+        {
+          "login": "mahmoud-maghrabia"
+        },
+        {
+          "login": "abdelrahman-abdelrahman3"
+        },
+        {
+          "login": "mariam-awadallah"
+        },
+        {
+          "login": "abanoub-abdo"
+        },
+        {
+          "login": "mahmoud-salem"
+        },
+        {
+          "login": "mohamed-elbasyouni"
+        },
+        {
+          "login": "gamaleldin-khaled"
+        }
+      ]
+    },
+    "pegasus-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "mahmoud-maghrabia"
+        },
+        {
+          "login": "abdelrahman-abdelrahman3"
+        }
+      ]
+    },
+    "terminators-devs": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "marwan-salem"
+        },
+        {
+          "login": "mahmoud-medhat"
+        },
+        {
+          "login": "ali-ahmed9"
+        },
+        {
+          "login": "hossam-elsayed1"
+        },
+        {
+          "login": "omnia-khaled"
+        }
+      ]
+    },
+    "terminators-reviewers": {
+      "members": [
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "marwan-salem"
+        },
+        {
+          "login": "ali-ahmed9"
+        }
+      ]
+    },
+    "warriors-devs": {
+      "members": [
+        {
+          "login": "nouran-mohamed1"
+        },
+        {
+          "login": "ahmed-shaarawyshehata"
+        },
+        {
+          "login": "mohamed-farag3"
+        },
+        {
+          "login": "ahmed-hanyyoussef"
+        }
+      ]
+    },
+    "warriors-reviewers": {
+      "members": [
+        {
+          "login": "nouran-mohamed1"
+        },
+        {
+          "login": "mohamed-farag3"
+        }
+      ]
+    }
+  }
+}
